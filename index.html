@@ -7,65 +7,79 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .app-card:hover img { transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
     <nav class="p-6 max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-2xl font-bold text-blue-600">BabySmile<span class="text-slate-700">Apps</span></div>
-        <div class="space-x-6 hidden md:block">
+        <div class="flex items-center gap-3">
+            <div class="text-2xl font-bold text-blue-600 tracking-tight">BabySmile<span class="text-slate-700">Apps</span></div>
+        </div>
+        <div class="space-x-6 hidden md:flex items-center">
             <a href="#apps" class="hover:text-blue-600 font-medium transition">Our Apps</a>
-            <a href="mailto:votre-email@gmail.com" class="hover:text-blue-600 font-medium transition">Support</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSezyQwixfuQVrBCthgB7SfKLdjbddiyenFdqQBo3dURbfHLRg/viewform" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition">Support</a>
         </div>
     </nav>
 
-    <header class="py-16 px-6 text-center max-w-4xl mx-auto">
-        <h1 class="text-5xl font-extrabold tracking-tight mb-6">Master your money with simplicity.</h1>
-        <p class="text-xl text-slate-600 mb-10">Join thousands of users who optimize their budget and secure their loans through our intuitive applications.</p>
+    <header class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">Master your money with simplicity.</h1>
+        <p class="text-xl text-slate-600 mb-10">Join thousands of users who optimize their budget and secure their loans through our intuitive, powerful financial applications.</p>
     </header>
 
-    <main id="apps" class="max-w-7xl mx-auto px-6 space-y-24 pb-24">
+    <main id="apps" class="max-w-7xl mx-auto px-6 space-y-32 pb-32">
         
-        <section class="flex flex-col md:flex-row items-center gap-12">
+        <section class="flex flex-col md:flex-row items-center gap-16 app-card">
             <div class="flex-1">
-                <div class="bg-blue-600 w-16 h-16 rounded-2xl mb-6 flex items-center justify-center shadow-lg">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zM12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z"></path></svg>
-                </div>
-                <h2 class="text-3xl font-bold mb-4">My Budget Plan</h2>
-                <p class="text-lg text-slate-600 mb-6">Stop wondering where your money goes. Track your income and expenses in real-time with clear, precise charts.</p>
+                <img src="https://play-lh.googleusercontent.com/D1tMrMA9qC-rTIxtlTxIty9h_YOOlzBhpqaGQKkBEdv70RNS33m-Jh_mGywDXlTZkF1qFurvuzAXkMGbMaRUcQ=s128-rw" alt="My Budget Plan Logo" class="w-20 h-20 rounded-2xl mb-6 shadow-md border border-slate-100">
+                <h2 class="text-4xl font-bold mb-4">My Budget Plan</h2>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Stop wondering where your money goes. Track your income and expenses in real-time with clear, precise charts and intelligent categorization.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://play.google.com/store/apps/details?id=com.babysmile.my_budget_plan" target="_blank" class="transition hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12"></a>
-                    <a href="https://apple.com" target="_blank" class="transition hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-12"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.babysmile.my_budget_plan" target="_blank" class="transition hover:scale-105 active:scale-95"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12"></a>
+                    <a href="https://apple.com" target="_blank" class="transition hover:scale-105 active:scale-95"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-12"></a>
                 </div>
             </div>
-            <div class="flex-1 bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
-                <div class="bg-slate-200 aspect-[9/16] rounded-xl flex items-center justify-center text-slate-400 font-medium">My Budget Plan Mockup</div>
+            <div class="flex-1">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-blue-100/50 rounded-[2rem] blur-2xl"></div>
+                    <img src="https://play-lh.googleusercontent.com/w8SK4YWbNjGEnORfq4glxonfe70MCv4Qp3M9aH26MJKE1Y6s-U8USZR97lVbgKNr28gH3q3CW8hpnYFFHYEebQ=w832-h470-rw" alt="My Budget Plan Interface" class="relative w-full h-auto rounded-3xl shadow-2xl border border-white transition-transform">
+                </div>
             </div>
         </section>
 
-        <section class="flex flex-col md:flex-row-reverse items-center gap-12">
+        <section class="flex flex-col md:flex-row-reverse items-center gap-16 app-card">
             <div class="flex-1">
-                <div class="bg-green-600 w-16 h-16 rounded-2xl mb-6 flex items-center justify-center shadow-lg text-white font-bold text-2xl">%</div>
-                <h2 class="text-3xl font-bold mb-4">Easy Loan Calculator Pro</h2>
-                <p class="text-lg text-slate-600 mb-6">Calculate your monthly payments, compare interest rates, and visualize your full amortization schedule before you commit.</p>
+                <img src="https://play-lh.googleusercontent.com/K_hBST5YJ5GsDsdXLXa4MfPZhNEQLA4CjALh-7lGkiK4xdkNtFA2D3EGqfbbiv9-HHI9jI-Tv6xbFcvy0Yca=s128-rw" alt="Easy Loan Calculator Logo" class="w-20 h-20 rounded-2xl mb-6 shadow-md border border-slate-100">
+                <h2 class="text-4xl font-bold mb-4">Easy Loan Calculator Pro</h2>
+                <p class="text-lg text-slate-600 mb-8 leading-relaxed">Simulate your loans in seconds. Calculate monthly payments, compare interest rates, and visualize your full amortization schedule before you commit.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="https://play.google.com/store/apps/details?id=appinventor.ai_Newbebiko.Simulation" target="_blank" class="transition hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12"></a>
-                    <a href="https://apple.com" target="_blank" class="transition hover:opacity-80"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-12"></a>
+                    <a href="https://play.google.com/store/apps/details?id=appinventor.ai_Newbebiko.Simulation" target="_blank" class="transition hover:scale-105 active:scale-95"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-12"></a>
+                    <a href="https://apple.com" target="_blank" class="transition hover:scale-105 active:scale-95"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-12"></a>
                 </div>
             </div>
-            <div class="flex-1 bg-white p-8 rounded-3xl shadow-xl border border-slate-100">
-                <div class="bg-slate-200 aspect-[9/16] rounded-xl flex items-center justify-center text-slate-400 font-medium">Loan Calculator Mockup</div>
+            <div class="flex-1">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-green-100/50 rounded-[2rem] blur-2xl"></div>
+                    <img src="https://play-lh.googleusercontent.com/aq8Ox6GIUmf21OVpqYgL8zvepPFG2QigPg4y062dqto8_uJaBf7RukjERfoLdhbVGqf3=w832-h470-rw" alt="Easy Loan Calculator Interface" class="relative w-full h-auto rounded-3xl shadow-2xl border border-white transition-transform">
+                </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 text-center">
-        <p>&copy; 2024 BabySmile Apps. All rights reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="#" class="hover:text-white transition">Privacy Policy</a>
-            <a href="#" class="hover:text-white transition">Terms of Service</a>
+    <footer class="bg-slate-900 text-slate-400 py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-2xl font-bold text-white mb-6">BabySmile<span class="text-blue-500">Apps</span></div>
+            <p class="mb-8">Simple, intuitive financial solutions for everyone.</p>
+            <div class="flex justify-center gap-8 mb-10 text-sm font-medium">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSezyQwixfuQVrBCthgB7SfKLdjbddiyenFdqQBo3dURbfHLRg/viewform" target="_blank" class="hover:text-white transition">Contact Support</a>
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-xs tracking-widest uppercase">
+                &copy; 2026 Baby Smile Apps. All rights reserved.
+            </div>
         </div>
     </footer>
 
