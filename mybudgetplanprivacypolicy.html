@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - My Budget Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            line-height: 1.8; 
+            color: #2d3748; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        h1 { 
+            color: #1a202c; 
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .last-updated {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8f0ff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px 25px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #5a67d8;
+            font-weight: 500;
+        }
+        
+        h2 { 
+            color: #2d3748; 
+            margin-top: 45px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h2::before {
+            content: "";
+            width: 6px;
+            height: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-right: 15px;
+            border-radius: 3px;
+        }
+        
+        p { 
+            margin-bottom: 20px;
+            color: #4a5568;
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        
+        strong {
+            color: #2d3748;
+            font-weight: 600;
+        }
+        
+        ul {
+            margin: 25px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        ul li {
+            padding: 15px 25px;
+            margin: 12px 0;
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-left: 4px solid #667eea;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 20px;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        ul li:hover {
+            background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+        }
+        
+        ul li strong {
+            color: #667eea;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border: 2px solid #fc8181;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+        
+        .info-box h3 {
+            color: #c53030;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2em;
+        }
+        
+        .info-box h3::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.3em;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            margin-top: 50px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+        
+        .contact-box h2 {
+            color: white;
+            border: none;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+        
+        .contact-box h2::before {
+            display: none;
+        }
+        
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-box a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            border-bottom: 2px solid #ffd700;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 5px 10px;
+        }
+        
+        .contact-box a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+            transform: translateY(-2px);
+        }
+        
+        .footer { 
+            margin-top: 60px;
+            padding-top: 30px;
+            font-size: 0.9em;
+            color: #718096;
+            border-top: 2px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            h2 {
+                font-size: 1.3em;
+            }
+            
+            .app-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">💰</div>
+            <h1>My Budget Plan</h1>
+            <p style="color: #718096; font-size: 1.1em; margin-top: 10px;">Privacy Policy</p>
+        </div>
+        
+        <div class="last-updated">
+            📅 Last Updated: February 22, 2026
+        </div>
+        
+        <p>This privacy policy describes how the <strong>My Budget Plan</strong> application collects, uses, and shares your information when you use our services.</p>
+        
+        <h2>1. Data Collection</h2>
+        <p>We collect the following information to ensure the proper functioning of the application:</p>
+        
+        <ul>
+            <li><strong>Purchase Data:</strong> We use RevenueCat to manage subscriptions and in-app purchases. No banking data is stored on our servers; it is processed securely by the App Store.</li>
+            <li><strong>Camera Access:</strong> The application requests access to the Camera only to allow scanning of receipts or invoices. No images are collected without your explicit action.</li>
+        </ul>
+        
+        <h2>2. Use of Data</h2>
+        <p>Your data is used exclusively to:</p>
+        
+        <ul>
+            <li>Provide and maintain the Premium features of the application</li>
+            <li>Process your transactions via the App Store</li>
+            <li>Improve the user experience</li>
+        </ul>
+        
+        <h2>3. Third-Party Services</h2>
+        <p>We share anonymized technical data with:</p>
+        
+        <ul>
+            <li><strong>Apple App Store Services:</strong> For application management and purchases</li>
+            <li><strong>RevenueCat:</strong> For validation and tracking of your Premium subscription</li>
+            <li><strong>Firebase Analytics/Crashlytics:</strong> For app performance and crash reporting</li>
+        </ul>
+        
+        <div class="info-box">
+            <h3>Platform-Specific Services</h3>
+            <p><strong>iOS:</strong> This application uses Firebase Analytics and Crashlytics for performance monitoring. No third-party advertising networks are used on iOS.</p>
+        </div>
+        
+        <h2>4. Data Retention</h2>
+        <p>We retain your transaction information as long as necessary to provide you with access to Premium services. You can request the deletion of your data by contacting us at any time.</p>
+        
+        <h2>5. Your Rights</h2>
+        <p>You have the right to:</p>
+        
+        <ul>
+            <li>Access your personal data</li>
+            <li>Request correction of inaccurate data</li>
+            <li>Request deletion of your data</li>
+            <li>Withdraw consent at any time</li>
+        </ul>
+        
+        <div class="contact-box">
+            <h2>📧 Contact Us</h2>
+            <p>For any questions regarding this policy or to exercise your privacy rights:</p>
+            <a href="mailto:ma.babysmile@gmail.com">ma.babysmile@gmail.com</a>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2026 Baby Smile Apps. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Made with ❤️ for your financial wellness</p>
+        </div>
+    </div>
+</body>
+</html>
